@@ -1,2 +1,4 @@
 env_weather/**
 *.jpg
+config.py
+__pycache__/**
