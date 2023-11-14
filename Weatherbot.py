@@ -2,14 +2,15 @@ import telebot
 import requests
 import json
 from config import BOT, APIKEY
-bot = telebot.TeleBot(BOT)
 
+
+bot = telebot.TeleBot(BOT)
 API = APIKEY
 
 @bot.message_handler(commands=['start'])
 def start(message):
     bot.reply_to(message,'Введи назание города:')
-    #bot.register_next_step_handler( message, get_weather)
+    
 
 @bot.message_handler(content_types=['text'])
 def get_weather(message):
